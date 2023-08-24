@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+
+climate-sim.html
+HTML file to display HADCrut3 Climate Data using MapboxGL.js
+
+AUTHOR: Teoman (Ted) Yavuzkurt
+www.github.com/teomandavid
+www.teomandavid.com
+
+-->
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>HadCRUT3 Climate Data</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+
+
+    <!-- stylesheets -->
+    <!-- <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.css' rel='stylesheet' /> -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+    <link rel="stylesheet" href="climate-sim.css" />
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+    <!-- scripts -->
+    <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.js'></script> -->
+    <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="climate-sim.js"></script>
+</head>
+<body>
+
+<main>
+  <div id='map'></div>
+  <div class="t-map">
+    <p>The map shows the evolution of temperature from 1850 to 2009. The objective is to show how the effect of global warming increases over time.</p>
+    <img style="width: 100%; filter: brightness(0) invert(1);" src="name_logo.png" alt="">
+  </div>
+</main>
+
+<footer>
+<div>
+<div class="map-controls">
+    <span class="map-text-title m2">Year: </span><span id="year" class="map-text m2"></span>
+    <div id="map-slider" class="m2"></div>
+    <select id="map-months" class="m2"></select>
+    <select id="map-display" class="m2"></select>
+    <span class="mini"> Anomaly: </span><input type="checkbox" id="toggle-anomaly" />
+</div>
+
+<div class="map-controls">
+  <span class="map-text-title m5-top">Anomaly: </span><span id="anomaly" class="map-text m6-top"></span>
+  <button id="playpause" class="m5">Play</button>
+  <span class="mini m5">Loop:</span> <input type="checkbox" class="m8-top" id="toggle-loop" disabled>
+  <div class="gradient-container"><span id="raw-temp-start"></span><div id="temp-gradient" class="gradient">Raw Temp</div><span id="raw-temp-end"></span></div>
+  <div class="gradient-container"><span id="anomaly-start"></span><div id="anomaly-gradient" class="gradient">Anomaly</div><span id="anomaly-end"></span></div>
+</div>
+</div>
+
+</footer>
+<!-- bootstrap -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
+  </body>
+</body>
+</html>
