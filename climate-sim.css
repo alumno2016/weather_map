@@ -186,6 +186,13 @@ button{
   font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 800px){
+  .t-map{
+      top: 5%;
+      left: 2rem;
+  }
+}
+
 #temp-gradient{
   max-width: 350px;
   height: 20px;
